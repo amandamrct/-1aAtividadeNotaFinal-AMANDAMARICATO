@@ -81,14 +81,14 @@
             let altura = parseFloat(document.getElementById('altura').value);
             
             if(isNaN(peso) || isNaN(altura)) {
-                document.getElementById('resultado').innerHTML = "Preencha os campos necessários para calcular o seu IMC";
+                document.getElementById('resultado').innerHTML = "Preencha os campos corretamente!";
                 return;
             }
 
             let imc = peso / (altura * altura);
 
-                document.getElementById('resultado').innerHTML = 
-                "Seu IMC é: " 
+            document.getElementById('resultado').innerHTML = 
+                "Seu IMC é: " + imc + "<br>" + 
                 getClassificacao(imc);
         }
 
