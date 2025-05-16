@@ -87,16 +87,13 @@
 
             let imc = peso / (altura * altura);
             
-            document.getElementById('resultado').innerHTML = 
-                "Seu IMC é: " + imc.toFixed(2) + "<br>" + 
-                getClassificacao(imc);
         }
 
         function getClassificacao(imc) {
             if(imc < 18.5) return "Você está abaixo do peso";
             else if(imc < 25) return "Você está com o peso normal";
-            else if(imc < 30) return "Sobrepeso";
-            else return "Obesidade";
+            else if(imc < 30) return "Você está com sobrepeso";
+            else return "Você está obeso";
         }
     </script>
 </body>
